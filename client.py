@@ -1,8 +1,10 @@
 import paho.mqtt.client as mqtt
 import serial
 
+
+
 def on_connect(client, userdata, flags, rc): # func for making connection
-	print("Connected to MQTT")
+	print(f"Connected to MQTT Server {ADD} at port {PORT}")
 	print("Connection returned result: " +str(rc))
 	topic = "ifn649"
 	client.subscribe("ifn649")
@@ -14,7 +16,7 @@ def on_message(client, userdata, msg): 	#Func For Sending msg
 	
 	ser = serial.Serial("/dev/rfcomm0", 9600)
 	ser.write(msg.payload)
-
+	
 ADD = "3.27.156.48"
 PORT = 1883
 client = mqtt.Client()
