@@ -1,4 +1,5 @@
 import paho.mqtt.client as mqtt
+import time
 import serial
 
 
@@ -14,10 +15,10 @@ def on_message(client, userdata, msg): 	#Func For Sending msg
 	print(msg.topic+" "+str(msg.payload))
 	print("relaying to teensy over BT...")
 	
-	ser = serial.Serial("/dev/rfcomm0", 9600)
-	ser.write(msg.payload)
+	#ser = serial.Serial("/dev/rfcomm1", 9600)
+	#ser.write(msg.payload)
 	
-ADD = "3.27.156.48"
+ADD = "3.27.149.9"
 PORT = 1883
 client = mqtt.Client()
 client.on_connect = on_connect
