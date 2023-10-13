@@ -1,5 +1,5 @@
 int Led = 13; // define LED Interface
-int buttonpin = A0; // define the tilt switch sensor interfaces
+int buttonpin = 1; // define the tilt switch sensor interfaces
 int val; // define numeric variables val
 
 void setup () {

@@ -33,18 +33,18 @@ void loop(void)
   {
     Serial.println("[Safe]");
     Serial1.println("[Safe]");
-    delay(10000);
+    delay(1000);
   }
   else if (tempC >= 4.0 && tempC <= 8.0)
   {
     Serial.println("[Caution]");
     Serial1.println("[Caution]");
-    delay(10000);
+    delay(1000);
   }
   else
   {
     Serial.println("[Warning]");
     Serial1.println("[Warning]");
-    delay(10000);
+    delay(1000);
   }
 }
