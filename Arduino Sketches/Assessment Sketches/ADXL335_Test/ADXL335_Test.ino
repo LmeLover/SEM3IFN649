@@ -1,8 +1,8 @@
-const int xpin = A0;                  // x-axis of the accelerometer
+const int xpin = 20;                  // x-axis of the accelerometer
 
-const int ypin = A1;                  // y-axis
+const int ypin = 19;                  // y-axis
 
-const int zpin = A2;                  // z-axis (only on 3-axis models)
+const int zpin = 18;                  // z-axis (only on 3-axis models)
 
 void setup() {
 
@@ -39,5 +39,5 @@ void loop() {
   }
 
   // Delay before next reading:
-  delay(200);
+  delay(100);
 }

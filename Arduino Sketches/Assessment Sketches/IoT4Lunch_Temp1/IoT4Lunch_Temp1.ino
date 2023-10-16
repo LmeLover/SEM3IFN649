@@ -26,7 +26,7 @@ void loop(void)
   Serial.print("Temperature in cooler is: ");
   Serial.print(tempC);
 
-  Serial1.print("Temperature in cooler is: ");
+  Serial1.print("Temperature is: ");
   Serial1.print(tempC);
 
   if (tempC < 4.0)
