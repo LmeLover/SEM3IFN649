@@ -13,7 +13,7 @@ def on_connect(client, userdata, flags, rc):
 # Define callback function for when a message is received from the broker
 def on_message(client, userdata, msg):
     print(f"Received message on topic {msg.topic}: {msg.payload.decode('utf-8')}")
-    ser = serial.Serial("/dev/rfcomm1", 9600)
+    ser = serial.Serial("/dev/rfcomm2", 9600)
     message_to_send = msg.payload.decode('utf-8') + '\n'
     ser.write(message_to_send.encode())
 

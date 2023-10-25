@@ -8,7 +8,7 @@ port = 1883  # Default MQTT port
 topic = "ifn649"  # Replace with the desired MQTT topic
 
 # Message content
-message = "Hello, MQTT!"
+message = "Warning"
 
 # Publish the message
 publish.single(topic, message, hostname=broker_address, port=port)

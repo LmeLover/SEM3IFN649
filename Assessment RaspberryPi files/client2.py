@@ -6,14 +6,14 @@ import time
 def on_connect(client, userdata, flags, rc):
     if rc == 0:
         print("Connected to MQTT broker")
-        client.subscribe("ifn649")  # Subscribe to the desired MQTT topic
+        client.subscribe("ifn649_mode")  # Subscribe to the desired MQTT topic
     else:
         print("Connection failed with code:", rc)
 
 # Define callback function for when a message is received from the broker
 def on_message(client, userdata, msg):
     print(f"Received message on topic {msg.topic}: {msg.payload.decode('utf-8')}")
-    ser = serial.Serial("/dev/rfcomm1", 9600)
+    ser = serial.Serial("/dev/rfcomm0", 9600)
     message_to_send = msg.payload.decode('utf-8') + '\n'
     ser.write(message_to_send.encode())
 
