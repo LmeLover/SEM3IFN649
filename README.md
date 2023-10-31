@@ -9,8 +9,9 @@ The Assessment Arduino Sketches folder contain several test sketches using diffe
 ---  
 **Videos**  
 Here are some videos of testing some of the components.  
+  
 
-
+Video Demonstration (https://studio.youtube.com/video/fWeclDFsEMk/edit)
 Testing LCD Display (https://youtu.be/k9Xgu7n5mfU)  
 Testing LCD with Temperature (https://youtu.be/uptp26STzJw)  
 Testing the 3-Axis Accelerometer (https://youtu.be/OpdrPHYnN8Y)  
